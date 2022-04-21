@@ -1,0 +1,61 @@
+
+// ------------------------------------------------- Switch case ---------------------------------------------------------
+
+/* 
+Problem:-
+
+  Write a menu driven program to calculate :
+    1. Area of a circle = pi * r^2 .       [pi = 22/7 or 3.14]
+    2. Area of a square = side * side .
+    3. Area of a rectangle = length * breadth
+
+  Enter 'c' to calculate area of circle.
+  Enter 's' to calculate area of square.
+  Enter 'r' to calculate area of rectangle.
+
+*/
+
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+
+int main()
+{
+  char operation;
+  float radius, pi = 3.14, area, side, length, breadth, area2, area3;
+
+  printf("------------Measurement Finder--------------");
+  printf("\nPleasse Choose one of the following :-");
+
+  printf("\npress 'c' to find Area OF A Circle. \npress 's' to calculate Area Of Square. \npress 'r' to calculate Area Of Rectangle. \n");
+  scanf("%c", &operation);
+
+  switch (operation)
+  {
+  case 'c':
+    printf("please enter radius of a circle (in cm): \n");
+    scanf("%f", &radius);
+    area = (pi * (radius * radius));
+    printf("Area Of the circle having radius %.2f cm is\t:  %.2f cm2", radius, area);
+    break;
+
+  case 's':
+    printf("please enter a side of a square (in cm): \n");
+    scanf("%f", &side);
+    area2 = (side * side);
+    printf("Area Of the circle having side of %.2f cm is\t:  %.2f cm2", side, area2);
+    break;
+
+  case 'r':
+    printf("please enter  > length <  and  > breadth <  of the rectangle (in cm): \n");
+    scanf("%f \n %f", &length, &breadth);
+    area3 = (length * breadth);
+    printf("Area Of the rectangle having leangth = %.2f cm & breadth = %.2f is\t:  %.2f cm2", length, breadth, area3);
+    break;
+
+  default:
+    printf(" ERROR !!!!  Recheck Your Choice");
+    break;
+  }
+  return 0;
+}
