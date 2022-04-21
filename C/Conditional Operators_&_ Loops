@@ -260,3 +260,29 @@ int main()
     }
     return 0;
 }
+
+
+
+// -------- C program to find sum of natural numbers from 1 to n ------------
+
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+
+int main()
+{
+  int n, i = 1, sum = 0;
+
+  printf("Input upper limit: \n");
+  scanf("%d", &n);
+
+  printf("Sum of all natural numbers from 1 to %d are: \n", n);
+
+    while (i<=n)
+    {
+      sum += i;
+      i++;
+    }
+    printf("%d", sum);
+    return 0;
+}
