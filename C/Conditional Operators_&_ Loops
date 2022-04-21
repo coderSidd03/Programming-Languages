@@ -1,0 +1,205 @@
+--------------decision making statements ----------------
+
+If - else
+switch case
+
+----------if-else----------
+#include<stdio.h>
+int main() {
+
+    int num;
+    printf("Enter a number \n");
+    scanf("%d", &num);
+
+    float rem = num%97;
+
+    // using turnery operator -------------
+
+    (num%97 == 0) ? printf("number is divisible by 97") : printf("number is not divisible by 97\nYou entered %d.\nthe remainder is %f", num, rem);
+
+    // if (num%97 == 0){
+    //     printf("number is divisible by 97");
+    // }
+    // else{
+    //     printf("number is not divisible by 97\nYou entered %d.\nthe remainder is %f", num, rem);
+    // }
+    return 0;
+}
+
+------------------- Switch case -----------------------
+
+#include <stdio.h>
+int main()
+{
+
+    int a;
+
+    printf("------------ Marks to grade converter-----------\n");
+    printf("Please enter your marks\n");
+    scanf("%d", &a);
+
+    if (a >= 90 && a <= 100)
+    {
+        printf("Your Grade : A");
+    }
+
+    else if (a >= 80 && a <= 89)
+    {
+        printf("Your Grade : B");
+    }
+
+    else if (a >= 70 && a <= 79)
+    {
+        printf("Your Grade : C");
+    }
+
+    else if (a >= 60 && a <= 69)
+    {
+        printf("Your Grade : D");
+    }
+
+    else if (a < 60)
+    {
+        printf("Your Grade : F");
+    }
+
+    else
+    {
+        printf("Your Grade : --- N/A ---");
+    }
+
+    return 0;
+}
+
+// -- -- -- -- -- -- -Student pass fail checker-- -- -- -- -- -- -- -
+
+#include <stdio.h>
+int main()
+{
+
+    int bengali, english, mathematics, physics, chemistry, biology, total, avg;
+
+    printf("-----WELCOME TO PASS FAIL CHECKER-----");
+
+    printf("\nEnter the marks of bengali : \n");
+    scanf("%d", &bengali);
+
+    printf("Enter the marks of english : \n");
+    scanf("%d", &english);
+
+    printf("Enter the marks of mathematics : \n");
+    scanf("%d", &mathematics);
+
+    printf("Enter the marks of physics : \n");
+    scanf("%d", &physics);
+
+    printf("Enter the marks of chemistry : \n");
+    scanf("%d", &chemistry);
+
+    printf("Enter the marks of biology : \n");
+    scanf("%d", &biology);
+
+    total = bengali + english + mathematics + physics + chemistry + biology;
+    avg = total / 6;
+
+    if (avg < 40 || (bengali < 33 || english < 33 || mathematics < 33 || physics < 33 || chemistry < 33 || biology < 33))
+    {
+        printf("Sorry you are failed ('Either your total percentage is below 40 or you got less than 33 in any of your subjects')");
+    }
+    else
+    {
+        printf("You are passed");
+    }
+
+    return 0;
+}
+
+------------- Leap year ----------------
+
+#include <stdio.h>
+int main()
+{
+
+    int year;
+    printf("---Leap year finder---");
+
+    printf("\nEnter a year : \n");
+    scanf("%d", &year);
+
+    if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0))
+    {
+        printf("Year is leap year");
+    }
+    else
+    {
+        printf("Year is not leap year");
+    }
+
+    return 0;
+}
+
+-----------------------------------------------  LOOP Control Statement  ------------------------------------------
+
+-----------------------------------------------  While LOOP ------------------------------------------
+
+-------- multiplication table upto 10th times ------------
+
+#include <stdio.h>
+int main()
+{
+  int num, count = 1;
+  printf("Enter any number\n");
+  scanf("%d", &num);
+
+  printf("\nMultiplication table for %d is:\n\n", num);
+
+  while (count < 11)
+  {
+    printf("%d X %d = %d\n", num, count, (num * count));
+    count++;
+  }
+
+  return 0;
+}
+
+-------- Write a C program to print all natural numbers in reverse (from n to 1). ------------
+
+#include <stdio.h>
+int main()
+{
+
+  int num;
+
+  printf("\nEnter any number :\n");
+  scanf("%d", &num);
+
+  printf("\nC program to print all natural numbers in reverse (from %d to 1)  is:\n\n", num);
+
+  while(num>=1)
+    {
+      printf("%d\n", num);
+      num--;
+    }
+
+  return 0;
+}
+
+
+
+-------- Write a C program to print Alphabets A to Z ------------
+
+#include <stdio.h>
+
+int main()
+{
+    char ch = 'a';
+
+    printf("Alphabets from a - z are: \n");
+    while(ch<='z')
+    {
+        printf("%c\n", ch);
+        ch++;
+    }
+
+    return 0;
+}
