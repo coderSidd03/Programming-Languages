@@ -13,7 +13,7 @@ It should call the method isOdd to check if each number is odd.
 
 The parameter end needs to be greater than or equal to start and both start and end parameters have to be greater than 0.
 
-If those conditions are not satisfied return -1 from the method to indicate invalid input. 
+If those conditions are not satisfied return -1 from the method to indicate invalid input.
 
 Example input/output:
 
@@ -38,7 +38,7 @@ NOTE: Do not add a  main method to solution code.
 
 
 
-public class Sum_Odd {
+public class SumOddRange {
 
     public static int sumOdd(int start, int end) {
 
@@ -58,10 +58,7 @@ public class Sum_Odd {
 
     public static boolean isOdd(int number) {
         if (number > 0) {
-            if (number % 2 == 0) {
-                return false;
-            }
-            return true;
+            return number % 2 != 0; 
         }
         return false;
     }
