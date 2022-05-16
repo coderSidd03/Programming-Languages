@@ -1,0 +1,28 @@
+/*
+
+Q --> take user input of Decimal values and Convert it to binary with Array
+
+*/
+
+#include<stdio.h>
+main()
+{
+    int a,b,n,turns, binary[10];
+    printf("Please Enter a number :\n>>>    ");
+    scanf("%d", &n);
+    printf("The Converted Binary value of %d :\n>>> ",n);
+    
+    // looping from 0 to n!=0 and storing the value in array
+    for(a=0; n!=0; a++){
+        binary[a]= n%2;
+        n=n/2;
+    }
+    
+    //  storing total count of a in turns
+    turns = a;
+    
+    //  returning array element in reverse to print the binary form from the front    
+    for(a=turns-1; a>=0; a--){
+        printf("%d", binary[a]);
+    }
+}
