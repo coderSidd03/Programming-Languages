@@ -1,8 +1,4 @@
 
-
-
-//Definition of Class 
-
 package com.company;
 
 public class Person {
