@@ -1,7 +1,4 @@
 
-//  Creating object in Main method and calling
-
-/*
 
 package com.company;
 
@@ -27,5 +24,3 @@ public class Main {
     }
 }
 
-
-*/
